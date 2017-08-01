@@ -16,20 +16,20 @@ import { Image } from 'cloudinary-react';
 
 const StyledAppBar = styled(AppBar)`
   width: 100%;
-  background: #000000;
-`;
+  background: -moz-linear-gradient(45deg, rgba(227,127,245,1) 0%, rgba(227,127,245,1) 1%, rgba(156,39,176,1) 99%, rgba(156,39,176,1) 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(227,127,245,1)), color-stop(1%, rgba(227,127,245,1)), color-stop(99%, rgba(156,39,176,1)), color-stop(100%, rgba(156,39,176,1))); /* safari4+,chrome */
+  background: -webkit-linear-gradient(45deg, rgba(227,127,245,1) 0%, rgba(227,127,245,1) 1%, rgba(156,39,176,1) 99%, rgba(156,39,176,1) 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(45deg, rgba(227,127,245,1) 0%, rgba(227,127,245,1) 1%, rgba(156,39,176,1) 99%, rgba(156,39,176,1) 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(45deg, rgba(227,127,245,1) 0%, rgba(227,127,245,1) 1%, rgba(156,39,176,1) 99%, rgba(156,39,176,1) 100%); /* ie10+ */
+  `;
 
 const A = styled.a`
-  font-family: 'Poiret One';
-  text-transform: uppercase;
-  font-size: 18px;
-  vertical-align: sub;
+  font-size: 26px;
   letter-spacing: 2px;
-  color: #F5F5F5 !important;
-  font-weight: bold;
+  color: #000000;
 
   &:hover {
-    color: #24A5DA;
+    color: #FCBA3F;
     text-decoration: none;
   }
 `;
@@ -49,17 +49,9 @@ const StyledMenuItem = styled(MenuItem)`
 
 const items = [
   {
-    name: 'Rates',
-    url: '/rates',
-  },
-  {
-    name: 'About',
-    url: '/about',
-  },
-  {
-    name: 'Contact',
-    url: '/contact',
-  },
+    name: 'Aloha Brothers Home',
+    url: 'http://www.alohabrothers.surf',
+  }
 ];
 
 const style = {
@@ -89,7 +81,10 @@ class Nav extends React.Component { // eslint-disable-line react/prefer-stateles
   }
 
   render() {
-    const brand = <A href="/" style={{ textDecoration: 'none' }}><Image cloudName="kurzweg" publicId="guitartree_watermelon" responsive style={{ width: '50px', height: '50px' }} />Silicon Beach Guitar Lessons</A>;
+    const brand = <div style={{ display: 'inline-flex' }}>
+                    <A href="/" style={{ color: '#2FF6CE', fontFamily: 'Lobster Two', textDecoration: 'none' }}>ding delight</A>&nbsp;&nbsp;
+                    <A href="http://www.alohabrothers.surf" target="blank" style={{ fontFamily: 'Lobster', fontSize: '22px' }}>by Aloha Brothers</A>
+                  </div>;
 
     return (
       <div>
@@ -97,16 +92,11 @@ class Nav extends React.Component { // eslint-disable-line react/prefer-stateles
           <StyledAppBar
             title={brand}
             titleStyle={{ textDecoration: 'none' }}
-            iconStyleRight={{ color: '#F5F5F5', padding: '1.3%' }}
             showMenuIconButton={false}
-            iconElementRight={<IconButton><MenuIcon /></IconButton>}
-            onRightIconButtonTouchTap={this.handleToggle}
-            style={{ backgroundColor: '#000000' }}
           />
-          <div style={{ height: '5px', backgroundColor: '#24A5DA' }}></div>
           <Drawer
             docked={false}
-            width={200}
+            width={300}
             openSecondary
             open={this.state.open}
             onRequestChange={(open) => this.setState({ open })}

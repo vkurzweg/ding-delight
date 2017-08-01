@@ -25,21 +25,19 @@ import MediaQuery from 'react-responsive';
 
 export default class HomePage extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
+  const ding = 'http://res.cloudinary.com/kurzweg/image/upload/v1501565000/ding_bw_crop.jpg';
     return (
       <div>
         <MediaQuery minWidth={768}>
           <Nav />
           <Hero />
-          <Intro />
+          <div style={{ height: '425px', backgroundImage: `url(${ding})`, backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
         </MediaQuery>
         <MediaQuery maxWidth={767}>
           <NavMobile />
           <HeroMobile />
           <IntroMobile />
         </MediaQuery>
-        <WW />
-        <Bio />
-        <Social />
         <Footer />
       </div>
     );

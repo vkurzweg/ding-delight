@@ -8,50 +8,24 @@ import React from 'react';
 import styled from 'styled-components';
 import { Image } from 'cloudinary-react';
 
-
-const Background = styled.div`
-  background-color: #000000;
-  font-size: 12px;
-  color: #FAFAFA;
-  text-align: center;
-  letter-spacing: 1.5px;
-  bottom: 0;
-  padding: 1%;
-`;
-
-const Stripe = styled.div`
-  height: 5px;
-  background-color: #FC527F;
-  z-index: 100;
-  position: relative;
-`;
-
-const Link = styled.a`
+const A = styled.a`
   font-family: 'Roboto';
-  color: #24A5DA;
+  color: #108EE9;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 16px;
   text-decoration: none;
   letter-spacing: 2px;
   &:hover {
-    color: #FF5349;
+    color: #7C4DFF;
     text-decoration: none;
   }
 `;
 
 function Footer() {
   return (
-    <Background>
-      <p style={{ textAlign: 'center' }}>
-        <a href="https://www.instagram.com/siliconbeachguitar" target="blank"><Image cloudName="kurzweg" publicId="instagram-min" quality="auto" responsive style={{ padding: '2%', textAlign: 'center' }} /></a>
-        <a href="https://www.facebook.com/siliconbeachguitar" target="blank"><Image cloudName="kurzweg" publicId="facebook-min" quality="auto" responsive style={{ padding: '2%', textAlign: 'center' }} /></a>
-        <a href="https://twitter.com/SiliconBeachGTR" target="blank"><Image cloudName="kurzweg" publicId="twitter-min" quality="auto" responsive style={{ padding: '2%', textAlign: 'center' }} /></a>
-        <a href="" target="blank"><Image cloudName="kurzweg" publicId="yelp-min" quality="auto" responsive style={{ padding: '2%', textAlign: 'center' }} /></a>
-        <a href="" target="blank"><Image cloudName="kurzweg" publicId="tripadvisor-min" quality="auto" responsive style={{ padding: '2%', textAlign: 'center' }} /></a>
-      </p>
-
-      <p style={{ marginBottom: '0' }}>Copyright SBGL 2017 &nbsp;<img style={{ width: '40px', height: '40px' }} src="http://res.cloudinary.com/kurzweg/image/upload/v1497936951/guitartree_blue.png" alt="silicon beach guitar lessons logo" />&nbsp; Website by <Link href="http://www.v-k.la/" target="blank">VK/LA</Link></p>
-    </Background>
+    <div style={{ backgroundColor: '#000000' }}>
+      <p style={{ fontSize: '12px', color: '#FAFAFA', textAlign: 'center', letterSpacing: '1.5px', padding: '2%' }}>Copyright 2017 ABSL &nbsp; <Image cloudName="kurzweg" publicId="aloha_logo" quality="auto" width="30" responsive  /> &nbsp; Website by <A href="http://www.v-k.la/" target="blank">VK/LA</A></p>
+    </div>
   );
 }
 

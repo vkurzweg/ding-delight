@@ -8,7 +8,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Background = styled.div`
-  background-image: url('http://res.cloudinary.com/kurzweg/image/upload/v1499379497/palms.jpg');
+  background-image: url('http://res.cloudinary.com/kurzweg/image/upload/v1501565000/ding_bw_crop.jpg');
   background-position: center center;
   background-attachment: fixed;
   background-repeat: no-repeat;
