@@ -63,7 +63,7 @@ class Intro extends React.Component { // eslint-disable-line react/prefer-statel
             </div>
             <div className="col-sm-6" style={{ paddingTop: '5%' }}>
               <p style={{ width: '100%', margin: '0 auto', fontSize: '20px', marginTop: '10%', lineHeight: '2.5em' }}>If you love your boards the way we do, you understand how devastating it can be when they get damaged. We want to help you get back out there as quickly and brudda brudda pricewise as possible.</p>
-              <Button className="btn btn-default">Get a Quote</Button>
+              <a href="http://www.alohabrothers.surf/contact" target="blank" style={{ textDecoration: 'none' }} ><Button className="btn btn-default">Get a Quote</Button></a>
             </div>
           </div>
         </div>

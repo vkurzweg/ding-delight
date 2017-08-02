@@ -25,7 +25,7 @@ const StyledAppBar = styled(AppBar)`
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#B3BCF5', endColorstr='#7C4DFF',GradientType=1 ); /* ie6-9 */  `;
 
 const A = styled.a`
-  font-size: 32px;
+  font-size: 38px;
   letter-spacing: 2px;
   color: #FCBA3F;
 
