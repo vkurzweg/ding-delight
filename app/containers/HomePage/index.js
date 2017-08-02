@@ -31,7 +31,7 @@ export default class HomePage extends React.PureComponent { // eslint-disable-li
         <MediaQuery minWidth={768}>
           <Nav />
           <Hero />
-          <div style={{ height: '425px', backgroundImage: `url(${ding})`, backgroundAttachment: 'fixed', backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+          <Intro />
         </MediaQuery>
         <MediaQuery maxWidth={767}>
           <NavMobile />
