@@ -59,7 +59,7 @@ class Intro extends React.Component { // eslint-disable-line react/prefer-statel
           </div>
           <div className="row" style={{ paddingBottom: '5%' }}>
             <div className="col-sm-6" style={{ paddingTop: '1%' }}>
-              <img className="img-responsive" style={{ padding: '5%' }} src="http://res.cloudinary.com/kurzweg/image/upload/v1501619395/ding_fullsize.jpg" alt="guitars" />
+              <img className="img-responsive" style={{ padding: '5%' }} src="http://res.cloudinary.com/kurzweg/image/upload/v1501619395/ding_bw_fullsize.jpg" alt="guitars" />
             </div>
             <div className="col-sm-6" style={{ paddingTop: '5%' }}>
               <p style={{ width: '100%', margin: '0 auto', fontSize: '20px', marginTop: '10%', lineHeight: '2.5em' }}>If you love your boards the way we do, you understand how devastating it can be when they get damaged. We want to help you get back out there as quickly and brudda brudda pricewise as possible.</p>
