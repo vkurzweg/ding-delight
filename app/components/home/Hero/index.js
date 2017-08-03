@@ -31,8 +31,8 @@ function Hero() {
     <div>
       <div style={{ zIndex: '10', dispay: 'block', margin: '0 auto', width: '100%', position: 'absolute', marginTop: '15%' }}>
         <h1 style={{ fontSize: '82px', fontFamily: 'Lobster Two', fontWeight: 'bold', textAlign: 'center', color: '#2FF6CE', letterSpacing: '3px', marginBottom: '2%' }}>fast & fair local ding repair</h1>
-        <h3 style={{ fontSize: '28px', fontFamily: 'Josefin Sans', textAlign: 'center', color: '#FCBA3F', textTransform: 'uppercase', letterSpacing: '3px' }}>serving southern california</h3>
-        <h3 style={{ fontSize: '28px', fontFamily: 'Josefin Sans', textAlign: 'center', color: '#EB453A', textTransform: 'uppercase', letterSpacing: '3px' }}>instant quote</h3>
+        <h3 style={{ fontSize: '36px', fontFamily: 'Josefin Sans', textAlign: 'center', color: '#FCBA3F', textTransform: 'uppercase', letterSpacing: '3px' }}>serving southern california</h3>
+        <h3 style={{ fontSize: '36px', fontFamily: 'Josefin Sans', textAlign: 'center', color: '#EB453A', textTransform: 'uppercase', letterSpacing: '3px' }}>instant quote</h3>
       </div>
       <video style={{ backgroundColor: 'black', zIndex: '1', height: '15%', width: '100%', float: 'left', top: '0', padding: 'none' }} loop autoPlay>
         <source src="http://res.cloudinary.com/kurzweg/video/upload/v1501652265/ding_delight.mov" />

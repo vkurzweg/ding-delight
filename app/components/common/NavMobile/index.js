@@ -16,38 +16,43 @@ import { Image } from 'cloudinary-react';
 
 const StyledAppBar = styled(AppBar)`
   width: 100%;
-  background: #000000;
-`;
+  background: -moz-linear-gradient(45deg, rgba(124,77,255,1) 0%, rgba(179,188,245,1) 100%); /* ff3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, rgba(124,77,255,1)), color-stop(100%, rgba(179,188,245,1))); /* safari4+,chrome */
+  background: -webkit-linear-gradient(45deg, rgba(124,77,255,1) 0%, rgba(179,188,245,1) 100%); /* safari5.1+,chrome10+ */
+  background: -o-linear-gradient(45deg, rgba(124,77,255,1) 0%, rgba(179,188,245,1) 100%); /* opera 11.10+ */
+  background: -ms-linear-gradient(45deg, rgba(124,77,255,1) 0%, rgba(179,188,245,1) 100%); /* ie10+ */
+  background: linear-gradient(45deg, rgba(124,77,255,1) 0%, rgba(179,188,245,1) 100%); /* w3c */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#B3BCF5', endColorstr='#7C4DFF',GradientType=1 ); /* ie6-9 */  `;
 
 const A = styled.a`
-  font-family: 'Poiret One';
-  text-transform: uppercase;
-  font-size: 12px;
+  font-size: 24px;
   letter-spacing: 2px;
-  margin-top: 1%;
-  padding-top: 1%;
-  color: #F5F5F5 !important;
-  font-weight: bold;
+  color: #FCBA3F;
+
+  &:hover {
+    color: #000000;
+    text-decoration: none;
+  }
+`;
+
+const StyledMenuItem = styled(MenuItem)`
+  color: #F5F5F5;
+  background-color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 2%;
+  color: #F5F5F5;
 
   &:hover {
     color: #24A5DA;
-    text-decoration: none;
   }
 `;
 
 const items = [
   {
-    name: 'Rates',
-    url: '/rates',
-  },
-  {
-    name: 'About',
-    url: '/about',
-  },
-  {
-    name: 'Contact',
-    url: '/contact',
-  },
+    name: 'Aloha Brothers Home',
+    url: 'http://www.alohabrothers.surf',
+  }
 ];
 
 const style = {
@@ -77,7 +82,10 @@ class Nav extends React.Component { // eslint-disable-line react/prefer-stateles
   }
 
   render() {
-    const brand = <A href="/" style={{ textDecoration: 'none', marginLeft: '-2%' }}><Image cloudName="kurzweg" publicId="guitartree_watermelon" responsive style={{ width: '35px', height: '35px', marginTop: '-4%' }} />Silicon Beach Guitar Lessons</A>;
+    const brand = <div style={{ display: 'inline-flex' }}>
+                    <A href="/" style={{ color: '#2FF6CE', fontFamily: 'Lobster Two', textDecoration: 'none' }}>ding delight</A>&nbsp;&nbsp;
+                    <A href="http://www.alohabrothers.surf" target="blank" style={{ fontFamily: 'Lobster', fontSize: '14px' }}>by Aloha Brothers <Image cloudName="kurzweg" publicId="aloha_logo" quality="auto" width="30" responsive  /></A>
+                  </div>;
 
     return (
       <div>
@@ -85,16 +93,11 @@ class Nav extends React.Component { // eslint-disable-line react/prefer-stateles
           <StyledAppBar
             title={brand}
             titleStyle={{ textDecoration: 'none' }}
-            iconStyleRight={{ color: '#F5F5F5', padding: '1.3%' }}
             showMenuIconButton={false}
-            iconElementRight={<IconButton><MenuIcon /></IconButton>}
-            onRightIconButtonTouchTap={this.handleToggle}
-            style={{ backgroundColor: '#000000' }}
           />
-          <div style={{ height: '5px', backgroundColor: '#24A5DA' }}></div>
           <Drawer
             docked={false}
-            width={200}
+            width={300}
             openSecondary
             open={this.state.open}
             onRequestChange={(open) => this.setState({ open })}
@@ -103,7 +106,7 @@ class Nav extends React.Component { // eslint-disable-line react/prefer-stateles
             <div style={{ paddingTop: '25%' }}>
             {items.map((item, idx) => {
               return (
-                <MenuItem key={idx} onTouchTap={this.handleClose.bind(null, item.url)} style={{ color: '#F5F5F5', backgroundColor: '#000000', textTransform: 'uppercase', letterSpacing: '2px' }}>{item.name}</MenuItem>
+                <StyledMenuItem key={idx} onTouchTap={this.handleClose.bind(null, item.url)} style={{ color: '#F5F5F5', backgroundColor: '#000000', textTransform: 'uppercase', letterSpacing: '2px', padding: '2%' }}>{item.name}</StyledMenuItem>
               );
             })}
             </div>
