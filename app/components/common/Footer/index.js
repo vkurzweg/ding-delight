@@ -24,7 +24,7 @@ const A = styled.a`
 function Footer() {
   return (
     <div style={{ backgroundColor: '#000000' }}>
-      <p style={{ fontSize: '12px', color: '#FAFAFA', textAlign: 'center', letterSpacing: '1.5px', padding: '2%' }}>Copyright 2017 ABSL &nbsp; &nbsp; Website by <A href="http://www.v-k.la/" target="blank">VK/LA</A></p>
+      <p style={{ fontSize: '12px', color: '#FAFAFA', textAlign: 'center', letterSpacing: '1.5px', padding: '2%' }}>Copyright 2017 ABSL &nbsp; &nbsp; Website by <A href="http://www.v-k.la/" target="blank">vk.digital</A></p>
     </div>
   );
 }
