@@ -18,7 +18,7 @@ const Background = styled.div`
 function Hero() {
   return (
     <div>
-      <video style={{ backgroundColor: 'black', zIndex: '1', width: '100%', float: 'left', top: '0', padding: 'none', paddingTop: '25%', paddingBottom: '10%' }} loop autoPlay>
+      <video style={{ backgroundColor: 'black', zIndex: '1', width: '100%', float: 'left', top: '0', padding: 'none', paddingTop: '25%', paddingBottom: '10%' }}>
         <source src="http://res.cloudinary.com/kurzweg/video/upload/v1501652265/ding_delight.mov" />
         Your browser does not support the video tag.
       </video>
