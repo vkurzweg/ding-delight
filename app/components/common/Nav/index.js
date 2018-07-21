@@ -84,7 +84,7 @@ class Nav extends React.Component { // eslint-disable-line react/prefer-stateles
   render() {
     const brand = <div style={{ display: 'inline-flex' }}>
                     <A href="/" style={{ color: '#2FF6CE', fontFamily: 'Lobster Two', textDecoration: 'none' }}>ding delight</A>&nbsp;&nbsp;
-                    <A href="http://www.alohabrothers.surf" target="blank" style={{ fontFamily: 'Lobster', fontSize: '22px' }}>by Aloha Brothers <Image cloudName="kurzweg" publicId="aloha_logo" quality="auto" width="30" responsive  /></A>
+                    <A href="http://www.alohabrothers.surf" target="blank" style={{ fontFamily: 'Lobster', fontSize: '22px' }}>by Aloha Brothers <Image cloudName="kurzweg" publicId="aloha-logo" quality="auto" width="30" responsive  /></A>
                   </div>;
 
     return (
